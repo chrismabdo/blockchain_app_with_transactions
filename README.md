@@ -12,3 +12,6 @@ In the case of Bitcoin and other cryptocurrencies, these data are groups of tran
 Gives rise to digital currencies like Bitcoin and Litecoin, and distributed computing in the form of technologies like Ethereum, which has introduced concepts like smart contracts.
 
 First block is referred to as the GENESIS Block
+
+## Mining
+To control the difficulty of mining new SnakeCoins, we’ll implement a Proof-of-Work (PoW) algorithm. A Proof-of-Work algorithm is essentially an algorithm that generates an item that is difficult to create but easy to verify. 
