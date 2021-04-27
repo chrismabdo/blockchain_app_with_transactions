@@ -5,4 +5,3 @@ def next_block(last_block):
     this_tranaction_count = this_transaction.size
     this_hash = last_block.hash
     return Block(this_index, this_timestamp, this_data, this_hash)
-    

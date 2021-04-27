@@ -1,19 +1,16 @@
-import hashlib as hasher
+import genesis
+import block
+import new_block
 
-class Block:
-  def __init__(self, index, timestamp, transactions, previous_hash):
-    self.index = index
-    self.timestamp = timestamp
-    self.trasnactions = transactions
-    self.trasnactions_count = trasnactions.size
-    self.previous_hash = previous_hash
-    self.hash = hash_block()
+blockchain = [create_genesis_block()]
+previous_block = blockchain[0]
 
-  def hash_block(self):
-    sha = hasher.sha256()
-    sha.update(str(self.index) +
-               str(self.timestamp) +
-               str(self.trasnactions) +
-               str(self.trasnactions_count) +
-               str(self.previous_hash))
-    return sha.hexdigest()
+num_of_blocks_to_add = 20
+
+for i in range(0, num_of_blocks_to_add):
+    block_to_add = next_block(previous_block)
+    blockchain.append(block_to_add)
+    previous_block = block_to_add
+
+    print(f"Block {block_to_add.index} has been added to the blockahin!")
+    print(f"Hash {block_to_add}\n")
